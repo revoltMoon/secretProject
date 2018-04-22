@@ -27,7 +27,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cq5-g5-2BE">
-                                            <rect key="frame" x="27" y="29" width="90" height="90"/>
+                                            <rect key="frame" x="36" y="11" width="90" height="90"/>
                                             <rect key="contentStretch" x="0.0" y="0.0" width="0.40000000000000002" height="0.40000000000000002"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="90" id="Ntq-2l-iJT"/>
@@ -35,25 +35,37 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8NF-4Y-aTL">
-                                            <rect key="frame" x="187" y="29" width="172" height="90"/>
+                                            <rect key="frame" x="187" y="11" width="172" height="90"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" alpha="0.59999999999999998" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Wp-5H-f3h">
+                                            <rect key="frame" x="36" y="109" width="90" height="30"/>
+                                            <color key="backgroundColor" red="1" green="0.53731394834796375" blue="0.57625845251174368" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <state key="normal" title="Your Fav:з">
+                                                <color key="titleColor" red="0.057249147048699989" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="8NF-4Y-aTL" firstAttribute="leading" secondItem="cq5-g5-2BE" secondAttribute="trailing" constant="70" id="Dor-Cb-s0e"/>
+                                        <constraint firstItem="3Wp-5H-f3h" firstAttribute="bottom" secondItem="zpT-9h-AXH" secondAttribute="bottomMargin" id="5Lw-Yl-e8L"/>
+                                        <constraint firstItem="3Wp-5H-f3h" firstAttribute="trailing" secondItem="cq5-g5-2BE" secondAttribute="trailing" id="DYE-IJ-M1H"/>
+                                        <constraint firstItem="8NF-4Y-aTL" firstAttribute="leading" secondItem="cq5-g5-2BE" secondAttribute="trailing" constant="61" id="Dor-Cb-s0e"/>
                                         <constraint firstItem="8NF-4Y-aTL" firstAttribute="trailing" secondItem="zpT-9h-AXH" secondAttribute="trailingMargin" id="EeN-ec-SvI"/>
-                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="top" secondItem="zpT-9h-AXH" secondAttribute="topMargin" constant="18" id="LSQ-QI-YZ7"/>
+                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="top" secondItem="zpT-9h-AXH" secondAttribute="topMargin" id="LSQ-QI-YZ7"/>
                                         <constraint firstItem="8NF-4Y-aTL" firstAttribute="bottom" secondItem="cq5-g5-2BE" secondAttribute="bottom" id="e6o-AB-ios"/>
-                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="centerY" secondItem="zpT-9h-AXH" secondAttribute="centerY" id="i78-al-bH7"/>
-                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="leading" secondItem="zpT-9h-AXH" secondAttribute="leadingMargin" constant="11" id="iZk-0X-bBX"/>
+                                        <constraint firstItem="3Wp-5H-f3h" firstAttribute="top" secondItem="cq5-g5-2BE" secondAttribute="bottom" constant="8" symbolic="YES" id="hLd-Dl-tQr"/>
+                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="centerY" secondItem="zpT-9h-AXH" secondAttribute="centerY" constant="-18.75" id="i78-al-bH7"/>
+                                        <constraint firstItem="cq5-g5-2BE" firstAttribute="leading" secondItem="zpT-9h-AXH" secondAttribute="leadingMargin" constant="20" id="iZk-0X-bBX"/>
+                                        <constraint firstItem="3Wp-5H-f3h" firstAttribute="leading" secondItem="cq5-g5-2BE" secondAttribute="leading" id="qhF-Gt-LUV"/>
                                         <constraint firstItem="8NF-4Y-aTL" firstAttribute="top" secondItem="cq5-g5-2BE" secondAttribute="top" id="y2h-Ud-0kg"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="courseImage" destination="cq5-g5-2BE" id="RDi-m2-DOB"/>
                                     <outlet property="courseName" destination="8NF-4Y-aTL" id="D8J-gb-NWW"/>
+                                    <outlet property="favButton" destination="3Wp-5H-f3h" id="s8P-dk-Kby"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,7 +74,7 @@
                             <outlet property="delegate" destination="QLq-15-A5j" id="2ZF-tV-Omb"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Courses" id="kAi-he-Zpm"/>
+                    <tabBarItem key="tabBarItem" title="Courses" image="lupa" id="kAi-he-Zpm"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZAp-qk-i9f" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -139,15 +151,15 @@
                             <outlet property="delegate" destination="hkd-6I-2KC" id="ssF-3s-QVw"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Favourite" id="8Gx-j2-TIK" userLabel="Main"/>
-                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="yzW-49-U4U">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </refreshControl>
+                    <tabBarItem key="tabBarItem" title="Favourite" image="star" id="8Gx-j2-TIK" userLabel="Main"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zxu-u2-G1M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1878" y="918"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="lupa" width="30" height="30"/>
+        <image name="star" width="24" height="24"/>
+    </resources>
 </document>

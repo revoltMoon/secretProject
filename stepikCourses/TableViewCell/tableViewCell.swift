@@ -9,4 +9,5 @@ import UIKit
 class tableViewCell: UITableViewCell {
     @IBOutlet weak var courseImage: UIImageView!
     @IBOutlet weak var courseName: UILabel!
+    @IBOutlet weak var favButton: UIButton!
 }

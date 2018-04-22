@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		5A20E651208B51C100848EEC /* favouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20E650208B51C100848EEC /* favouriteTableViewController.swift */; };
 		5A20E653208B529F00848EEC /* favouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20E652208B529F00848EEC /* favouriteTableViewCell.swift */; };
+		5A38A894208CCBAC00C1057D /* storedData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */; };
+		5A38A8BD208D2D5700C1057D /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8BC208D2D5700C1057D /* tableViewTests.swift */; };
+		5A38A8CB208D36A500C1057D /* favTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8CA208D36A500C1057D /* favTableViewTests.swift */; };
+		5A38A8D9208D39DF00C1057D /* testStepicServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8D8208D39DF00C1057D /* testStepicServer.swift */; };
 		5ADC91ED208B2A8900668A26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC91EC208B2A8900668A26 /* AppDelegate.swift */; };
 		5ADC91EF208B2A8900668A26 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC91EE208B2A8900668A26 /* tableViewController.swift */; };
 		5ADC91F2208B2A8900668A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADC91F0208B2A8900668A26 /* Main.storyboard */; };
@@ -19,9 +23,43 @@
 		5ADD0F83208BE08500175929 /* NotFound.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD0F82208BE08500175929 /* NotFound.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5A38A8BF208D2D5700C1057D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ADC91E1208B2A8900668A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADC91E8208B2A8900668A26;
+			remoteInfo = stepikCourses;
+		};
+		5A38A8CD208D36A500C1057D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ADC91E1208B2A8900668A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADC91E8208B2A8900668A26;
+			remoteInfo = stepikCourses;
+		};
+		5A38A8DB208D39DF00C1057D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5ADC91E1208B2A8900668A26 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5ADC91E8208B2A8900668A26;
+			remoteInfo = stepikCourses;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		5A20E650208B51C100848EEC /* favouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteTableViewController.swift; sourceTree = "<group>"; };
 		5A20E652208B529F00848EEC /* favouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteTableViewCell.swift; sourceTree = "<group>"; };
+		5A38A893208CCBAC00C1057D /* storedData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = storedData.xcdatamodel; sourceTree = "<group>"; };
+		5A38A8BA208D2D5700C1057D /* tableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A38A8BC208D2D5700C1057D /* tableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewTests.swift; sourceTree = "<group>"; };
+		5A38A8BE208D2D5700C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A38A8C8208D36A500C1057D /* favTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = favTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A38A8CA208D36A500C1057D /* favTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favTableViewTests.swift; sourceTree = "<group>"; };
+		5A38A8CC208D36A500C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A38A8D6208D39DF00C1057D /* testStepicServer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testStepicServer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A38A8D8208D39DF00C1057D /* testStepicServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testStepicServer.swift; sourceTree = "<group>"; };
+		5A38A8DA208D39DF00C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ADC91E9208B2A8900668A26 /* stepikCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stepikCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADC91EC208B2A8900668A26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADC91EE208B2A8900668A26 /* tableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +73,27 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5A38A8B7208D2D5700C1057D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8C5208D36A500C1057D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8D3208D39DF00C1057D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ADC91E6208B2A8900668A26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,10 +130,49 @@
 			path = ServerAPI;
 			sourceTree = "<group>";
 		};
+		5A38A8BB208D2D5700C1057D /* tableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A38A8BC208D2D5700C1057D /* tableViewTests.swift */,
+				5A38A8BE208D2D5700C1057D /* Info.plist */,
+			);
+			path = tableViewTests;
+			sourceTree = "<group>";
+		};
+		5A38A8C9208D36A500C1057D /* favTableViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				5A38A8CA208D36A500C1057D /* favTableViewTests.swift */,
+				5A38A8CC208D36A500C1057D /* Info.plist */,
+			);
+			path = favTableViewTests;
+			sourceTree = "<group>";
+		};
+		5A38A8D7208D39DF00C1057D /* testStepicServer */ = {
+			isa = PBXGroup;
+			children = (
+				5A38A8D8208D39DF00C1057D /* testStepicServer.swift */,
+				5A38A8DA208D39DF00C1057D /* Info.plist */,
+			);
+			path = testStepicServer;
+			sourceTree = "<group>";
+		};
+		5A38A8EC208D407E00C1057D /* storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5ADC91F5208B2A8B00668A26 /* LaunchScreen.storyboard */,
+				5ADC91F0208B2A8900668A26 /* Main.storyboard */,
+			);
+			path = storyboards;
+			sourceTree = "<group>";
+		};
 		5ADC91E0208B2A8900668A26 = {
 			isa = PBXGroup;
 			children = (
 				5ADC91EB208B2A8900668A26 /* stepikCourses */,
+				5A38A8BB208D2D5700C1057D /* tableViewTests */,
+				5A38A8C9208D36A500C1057D /* favTableViewTests */,
+				5A38A8D7208D39DF00C1057D /* testStepicServer */,
 				5ADC91EA208B2A8900668A26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,6 +181,9 @@
 			isa = PBXGroup;
 			children = (
 				5ADC91E9208B2A8900668A26 /* stepikCourses.app */,
+				5A38A8BA208D2D5700C1057D /* tableViewTests.xctest */,
+				5A38A8C8208D36A500C1057D /* favTableViewTests.xctest */,
+				5A38A8D6208D39DF00C1057D /* testStepicServer.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,15 +191,15 @@
 		5ADC91EB208B2A8900668A26 /* stepikCourses */ = {
 			isa = PBXGroup;
 			children = (
+				5A38A8EC208D407E00C1057D /* storyboards */,
 				5A20E654208B535300848EEC /* TableViewCell */,
 				5A20E655208B538300848EEC /* TableViewControllers */,
 				5A20E656208B539800848EEC /* ServerAPI */,
-				5ADC91F0208B2A8900668A26 /* Main.storyboard */,
 				5ADC91F3208B2A8B00668A26 /* Assets.xcassets */,
-				5ADD0F82208BE08500175929 /* NotFound.png */,
-				5ADC91F5208B2A8B00668A26 /* LaunchScreen.storyboard */,
+				5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */,
 				5ADC91EC208B2A8900668A26 /* AppDelegate.swift */,
 				5ADC91F8208B2A8B00668A26 /* Info.plist */,
+				5ADD0F82208BE08500175929 /* NotFound.png */,
 			);
 			path = stepikCourses;
 			sourceTree = "<group>";
@@ -106,6 +207,60 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5A38A8B9208D2D5700C1057D /* tableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A38A8C3208D2D5700C1057D /* Build configuration list for PBXNativeTarget "tableViewTests" */;
+			buildPhases = (
+				5A38A8B6208D2D5700C1057D /* Sources */,
+				5A38A8B7208D2D5700C1057D /* Frameworks */,
+				5A38A8B8208D2D5700C1057D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A38A8C0208D2D5700C1057D /* PBXTargetDependency */,
+			);
+			name = tableViewTests;
+			productName = tableViewTests;
+			productReference = 5A38A8BA208D2D5700C1057D /* tableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A38A8C7208D36A500C1057D /* favTableViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A38A8CF208D36A500C1057D /* Build configuration list for PBXNativeTarget "favTableViewTests" */;
+			buildPhases = (
+				5A38A8C4208D36A500C1057D /* Sources */,
+				5A38A8C5208D36A500C1057D /* Frameworks */,
+				5A38A8C6208D36A500C1057D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A38A8CE208D36A500C1057D /* PBXTargetDependency */,
+			);
+			name = favTableViewTests;
+			productName = favTableViewTests;
+			productReference = 5A38A8C8208D36A500C1057D /* favTableViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5A38A8D5208D39DF00C1057D /* testStepicServer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5A38A8DD208D39DF00C1057D /* Build configuration list for PBXNativeTarget "testStepicServer" */;
+			buildPhases = (
+				5A38A8D2208D39DF00C1057D /* Sources */,
+				5A38A8D3208D39DF00C1057D /* Frameworks */,
+				5A38A8D4208D39DF00C1057D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5A38A8DC208D39DF00C1057D /* PBXTargetDependency */,
+			);
+			name = testStepicServer;
+			productName = testStepicServer;
+			productReference = 5A38A8D6208D39DF00C1057D /* testStepicServer.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		5ADC91E8208B2A8900668A26 /* stepikCourses */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5ADC91FB208B2A8B00668A26 /* Build configuration list for PBXNativeTarget "stepikCourses" */;
@@ -133,6 +288,18 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Влад Купряков";
 				TargetAttributes = {
+					5A38A8B9208D2D5700C1057D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5ADC91E8208B2A8900668A26;
+					};
+					5A38A8C7208D36A500C1057D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5ADC91E8208B2A8900668A26;
+					};
+					5A38A8D5208D39DF00C1057D = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 5ADC91E8208B2A8900668A26;
+					};
 					5ADC91E8208B2A8900668A26 = {
 						CreatedOnToolsVersion = 9.3;
 					};
@@ -152,11 +319,35 @@
 			projectRoot = "";
 			targets = (
 				5ADC91E8208B2A8900668A26 /* stepikCourses */,
+				5A38A8B9208D2D5700C1057D /* tableViewTests */,
+				5A38A8C7208D36A500C1057D /* favTableViewTests */,
+				5A38A8D5208D39DF00C1057D /* testStepicServer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5A38A8B8208D2D5700C1057D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8C6208D36A500C1057D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8D4208D39DF00C1057D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ADC91E7208B2A8900668A26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -171,6 +362,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5A38A8B6208D2D5700C1057D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A38A8BD208D2D5700C1057D /* tableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8C4208D36A500C1057D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A38A8CB208D36A500C1057D /* favTableViewTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5A38A8D2208D39DF00C1057D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5A38A8D9208D39DF00C1057D /* testStepicServer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		5ADC91E5208B2A8900668A26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -178,6 +393,7 @@
 				5ADC91EF208B2A8900668A26 /* tableViewController.swift in Sources */,
 				5A20E651208B51C100848EEC /* favouriteTableViewController.swift in Sources */,
 				5ADC9201208B346500668A26 /* tableViewCell.swift in Sources */,
+				5A38A894208CCBAC00C1057D /* storedData.xcdatamodeld in Sources */,
 				5ADC91ED208B2A8900668A26 /* AppDelegate.swift in Sources */,
 				5ADC91FF208B2B7600668A26 /* stepikServer.swift in Sources */,
 				5A20E653208B529F00848EEC /* favouriteTableViewCell.swift in Sources */,
@@ -185,6 +401,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5A38A8C0208D2D5700C1057D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADC91E8208B2A8900668A26 /* stepikCourses */;
+			targetProxy = 5A38A8BF208D2D5700C1057D /* PBXContainerItemProxy */;
+		};
+		5A38A8CE208D36A500C1057D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADC91E8208B2A8900668A26 /* stepikCourses */;
+			targetProxy = 5A38A8CD208D36A500C1057D /* PBXContainerItemProxy */;
+		};
+		5A38A8DC208D39DF00C1057D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5ADC91E8208B2A8900668A26 /* stepikCourses */;
+			targetProxy = 5A38A8DB208D39DF00C1057D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5ADC91F0208B2A8900668A26 /* Main.storyboard */ = {
@@ -206,6 +440,126 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5A38A8C1208D2D5700C1057D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = tableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.tableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Debug;
+		};
+		5A38A8C2208D2D5700C1057D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = tableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.tableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Release;
+		};
+		5A38A8D0208D36A500C1057D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = favTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.favTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Debug;
+		};
+		5A38A8D1208D36A500C1057D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = favTableViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.favTableViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Release;
+		};
+		5A38A8DE208D39DF00C1057D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = testStepicServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.testStepicServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Debug;
+		};
+		5A38A8DF208D39DF00C1057D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z6YU7BJ52A;
+				INFOPLIST_FILE = testStepicServer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kup.testStepicServer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/stepikCourses.app/stepikCourses";
+			};
+			name = Release;
+		};
 		5ADC91F9208B2A8B00668A26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -359,6 +713,33 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5A38A8C3208D2D5700C1057D /* Build configuration list for PBXNativeTarget "tableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A38A8C1208D2D5700C1057D /* Debug */,
+				5A38A8C2208D2D5700C1057D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A38A8CF208D36A500C1057D /* Build configuration list for PBXNativeTarget "favTableViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A38A8D0208D36A500C1057D /* Debug */,
+				5A38A8D1208D36A500C1057D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5A38A8DD208D39DF00C1057D /* Build configuration list for PBXNativeTarget "testStepicServer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5A38A8DE208D39DF00C1057D /* Debug */,
+				5A38A8DF208D39DF00C1057D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		5ADC91E4208B2A8900668A26 /* Build configuration list for PBXProject "stepikCourses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -378,6 +759,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5A38A893208CCBAC00C1057D /* storedData.xcdatamodel */,
+			);
+			currentVersion = 5A38A893208CCBAC00C1057D /* storedData.xcdatamodel */;
+			path = storedData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5ADC91E1208B2A8900668A26 /* Project object */;
 }

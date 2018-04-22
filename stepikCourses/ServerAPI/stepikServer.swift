@@ -8,18 +8,16 @@
 
 import Foundation
 import UIKit
-protocol ololo {
+protocol stepikDel {
     func getNames(array: [String])
-//    func getImageURL(array: [String])
     func getImage(array: [UIImage])
 }
 class stepikServer {
-    var delegate: (ololo?) = nil
+    var delegate: (stepikDel?) = nil
     func getCourse(int: Int) {
         var courseNames = [String]()
         var urlImgArr = [UIImage]()
         var urlImages = [String]()
-//        var hasNext = false
         let path = "https://stepik.org/api/search-results?page=\(int)"
         let request = URL(string: path)
         let session = URLSession(configuration: URLSessionConfiguration.default)
@@ -28,6 +26,7 @@ class stepikServer {
                 print(error.localizedDescription)
             } else if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
+                
                 if let dic = json!!["search-results"] as? [[String: Any]] {
                     for info in dic {
                     if let name  = info["course_title"] as? String {
@@ -39,15 +38,6 @@ class stepikServer {
                         }
                     }
                 }
-                
-//                if let dic = json!!["meta"] as? [[String: String]] {
-//                    for info in dic {
-//                        if let name  = info["has_next"] as? String {
-//                            hasNext = Bool(name)!
-//                        }
-//                    }
-//                }
-                
                                 DispatchQueue.global(qos: .userInitiated).async {
                                     for item in urlImages {
                                         if let dataWithImg = try? Data(contentsOf: URL(string: item)!){
