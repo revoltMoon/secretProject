@@ -13,7 +13,7 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
     var filteredCourses = [String]()                       //courses after filtration
     var coursesNamesAndImages = [String:UIImage]()         //for moment, when we will start filtrating courses(needed Img from this dict)
     var coursesInMemory: [NSManagedObject] = []
-    var favCourses = [String:UIImage]()                    //for unique
+    var favCourses = [String:UIImage]()                    //for courses, which we would like to make favourite
     var coursesName = [String]()                           //names of courses from server
     var imgArr = [UIImage]()                               //images of courses from server
     var favController: favouriteTableViewController?
