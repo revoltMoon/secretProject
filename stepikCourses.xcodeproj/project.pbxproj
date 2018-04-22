@@ -16,6 +16,7 @@
 		5ADC91F7208B2A8B00668A26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADC91F5208B2A8B00668A26 /* LaunchScreen.storyboard */; };
 		5ADC91FF208B2B7600668A26 /* stepikServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC91FE208B2B7600668A26 /* stepikServer.swift */; };
 		5ADC9201208B346500668A26 /* tableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC9200208B346500668A26 /* tableViewCell.swift */; };
+		5ADD0F83208BE08500175929 /* NotFound.png in Resources */ = {isa = PBXBuildFile; fileRef = 5ADD0F82208BE08500175929 /* NotFound.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		5ADC91F8208B2A8B00668A26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ADC91FE208B2B7600668A26 /* stepikServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepikServer.swift; sourceTree = "<group>"; };
 		5ADC9200208B346500668A26 /* tableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewCell.swift; sourceTree = "<group>"; };
+		5ADD0F82208BE08500175929 /* NotFound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NotFound.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 				5A20E656208B539800848EEC /* ServerAPI */,
 				5ADC91F0208B2A8900668A26 /* Main.storyboard */,
 				5ADC91F3208B2A8B00668A26 /* Assets.xcassets */,
+				5ADD0F82208BE08500175929 /* NotFound.png */,
 				5ADC91F5208B2A8B00668A26 /* LaunchScreen.storyboard */,
 				5ADC91EC208B2A8900668A26 /* AppDelegate.swift */,
 				5ADC91F8208B2A8B00668A26 /* Info.plist */,
@@ -158,6 +161,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ADD0F83208BE08500175929 /* NotFound.png in Resources */,
 				5ADC91F7208B2A8B00668A26 /* LaunchScreen.storyboard in Resources */,
 				5ADC91F4208B2A8B00668A26 /* Assets.xcassets in Resources */,
 				5ADC91F2208B2A8900668A26 /* Main.storyboard in Resources */,

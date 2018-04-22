@@ -15,12 +15,12 @@ protocol ololo {
 }
 class stepikServer {
     var delegate: (ololo?) = nil
-    var urlImages = [String]()
-    func getCourse() {
+    func getCourse(int: Int) {
         var courseNames = [String]()
         var urlImgArr = [UIImage]()
-        var urlImgDict = [String:UIImage]()
-        let path = "https://stepik.org/api/search-results?page=1"
+        var urlImages = [String]()
+//        var hasNext = false
+        let path = "https://stepik.org/api/search-results?page=\(int)"
         let request = URL(string: path)
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: request!, completionHandler: {(data, response, error) -> Void in
@@ -28,66 +28,39 @@ class stepikServer {
                 print(error.localizedDescription)
             } else if let data = data {
                 let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
-                var dic = json!!["search-results"] as? [[String: Any]]
-                for info in dic! {
+                if let dic = json!!["search-results"] as? [[String: Any]] {
+                    for info in dic {
                     if let name  = info["course_title"] as? String {
                         courseNames.append(name)
                     }
+                    
                     if let name  = info["course_cover"] as? String {
-                        self.urlImages.append(name)
+                            urlImages.append(name)
+                        }
                     }
                 }
                 
-                DispatchQueue.global(qos: .userInitiated).async {
-                    for item in self.urlImages {
-                        let dataWithImg = try? Data(contentsOf: URL(string: item)!)
-                        urlImgArr.append(UIImage(data: dataWithImg!)!)
-                    }
-                    DispatchQueue.main.async {
-                    self.delegate?.getNames(array: courseNames)
-                    self.delegate?.getImage(array: urlImgArr)
-                    }
-                }
-                }
-//                DispatchQueue.main.async {
-//                self.delegate?.getNames(array: courseNames)
-//                    self.delegate?.getImageURL(array: self.urlImages)
-//                    for item in self.urlImages {
-//                        let dataWithImg = try? Data(contentsOf: URL(string: item)!)
-//                        //                    urlImgDict.append(UIImage(data: dataWithImg!)!)
-//                        urlImgArr.append(UIImage(data: dataWithImg!)!)
+//                if let dic = json!!["meta"] as? [[String: String]] {
+//                    for info in dic {
+//                        if let name  = info["has_next"] as? String {
+//                            hasNext = Bool(name)!
+//                        }
 //                    }
-//                    self.delegate?.getImage(array: urlImgArr)
 //                }
-//                DispatchQueue.main.async {
-//                    self.delegate?.getImageURL(array: self.urlImages)
-//                }
-//                DispatchQueue.main.async {
-//                    for item in self.urlImages {
-//                        let dataWithImg = try? Data(contentsOf: URL(string: item)!)
-//                        //                    urlImgDict.append(UIImage(data: dataWithImg!)!)
-//                        urlImgArr.append(UIImage(data: dataWithImg!)!)
-//                    }
-//                    self.delegate?.getImage(array: urlImgArr)
-//                }
-//            }
-        })
-        task.resume()
-    }
-    
-    func getImages (){
-//        print(self.urlImages)
-        let path = "https://stepik.org/api/search-results?page=1"
-        let request = URL(string: path)
-        let session = URLSession(configuration: URLSessionConfiguration.default)
-        let task = session.dataTask(with: request!, completionHandler: {(data, response, error) -> Void in
-            if let error = error {
-                print(error.localizedDescription)
-            } else if let data = data {
                 
-            }
-        })
-        task.resume()
-        
+                                DispatchQueue.global(qos: .userInitiated).async {
+                                    for item in urlImages {
+                                        if let dataWithImg = try? Data(contentsOf: URL(string: item)!){
+                                            urlImgArr.append(UIImage(data: dataWithImg)!)
+                                        }
+                                    }
+                            DispatchQueue.main.async {
+                            self.delegate?.getNames(array: courseNames)
+                            self.delegate?.getImage(array: urlImgArr)
+                            }
+                        }
+                    }
+                })
+            task.resume()
+        }
     }
-}
