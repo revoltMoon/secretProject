@@ -11,23 +11,22 @@ import CoreData
 class tableViewController: UITableViewController, UISearchResultsUpdating, stepikDel {
     let searchController = UISearchController(searchResultsController: nil)
     var filteredCourses = [String]()                       //courses after filtration
-    var coursesNamesAndImages = [String:UIImage]()         //for moment, when we will start filtrating courses(needed Img from this dict)
-    var coursesInMemory: [NSManagedObject] = []
+    var coursesNamesAndImages = [String:UIImage]()         //for the moment, when we will start filtrating courses(needed Img from this dict)
+    var coursesInMemory: [NSManagedObject] = []            //This for courses from memory
     var favCourses = [String:UIImage]()                    //for courses, which we would like to make favourite
     var coursesName = [String]()                           //names of courses from server
     var imgArr = [UIImage]()                               //images of courses from server
-    var favController: favouriteTableViewController?
-    var stepik: stepikServer?
+    var stepik: stepikServer?                              //Stepik class for server operations
     var ourPage = 1                                         //first page for downloading from server
     var isSearching = false                                 //searchMode
+    var mem: Memory?                                        //Memory class for CoreData operations
     
     override func viewDidLoad() {
         super.viewDidLoad()
         stepik = stepikServer()
         stepik?.delegate = self
-        stepik?.getCourse(int: ourPage)
-        
-        favController = favouriteTableViewController()
+        stepik?.getCourse(ourPage: ourPage)
+        mem = Memory()
         self.searchContr()
     }
     //setup our searchController
@@ -92,6 +91,10 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
             self.coursesName.append(item)
             self.tableView.reloadData()
         }
+        //это позволит нам убрать проверку isSearching при нажатии на кнопку, так как будем брать из этого массива данные
+        if !isSearching {
+            filteredCourses = coursesName
+        }
     }
     //get course images from server
     func getImage(array: [UIImage]) {
@@ -100,7 +103,7 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
         }
         if ourPage < 5 {
             ourPage += 1
-            stepik?.getCourse(int: ourPage)
+            stepik?.getCourse(ourPage: ourPage)
         }
         self.addImgAndNameInDict()
         self.tableView.reloadData()
@@ -140,7 +143,6 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
     //а вообще, метод нужен для того, чтобы добавлять в память избранные курсы(картинку + название курса)
     //суть проверок основывается на том, что мы проверяем, есть ли в CoreData уже избранный курс, если нет, добавляем
     @objc func favPressed(sender: UIButton){
-        if isSearching{
             var coursesNamesFromMem = [String]()
             if !coursesInMemory.isEmpty && !favCourses.keys.contains(filteredCourses[sender.tag]){
             for i in 0...coursesInMemory.count-1{
@@ -150,54 +152,19 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
                 if !coursesNamesFromMem.contains(filteredCourses[sender.tag]){
                     favCourses.updateValue(coursesNamesAndImages[filteredCourses[sender.tag]]!, forKey: filteredCourses[sender.tag])
                     let data = UIImagePNGRepresentation(coursesNamesAndImages[filteredCourses[sender.tag]]!) as Data?
-                    favController?.save(name: filteredCourses[sender.tag], imgData: data!)
+                    mem?.saveYourCourse(name: filteredCourses[sender.tag], imgData: data!)
                 }
                 
             } else if !favCourses.keys.contains(filteredCourses[sender.tag]) {
                 favCourses.updateValue(coursesNamesAndImages[filteredCourses[sender.tag]]!, forKey: filteredCourses[sender.tag])
                 let data = UIImagePNGRepresentation(coursesNamesAndImages[filteredCourses[sender.tag]]!) as Data?
-                favController?.save(name: filteredCourses[sender.tag], imgData: data!)
+                mem?.saveYourCourse(name: filteredCourses[sender.tag], imgData: data!)
             }
-            
-        } else {
-            var coursesNamesFromMem = [String]()
-            if !coursesInMemory.isEmpty && !favCourses.keys.contains(coursesName[sender.tag]) {
-                for i in 0...coursesInMemory.count-1{
-                    let nameOfCourse = coursesInMemory[i].value(forKeyPath: "courseName") as? String
-                    coursesNamesFromMem.append(nameOfCourse!)
-                }
-                
-                if !coursesNamesFromMem.contains(coursesName[sender.tag]){
-                    favCourses.updateValue(imgArr[sender.tag], forKey: coursesName[sender.tag])
-                    let data = UIImagePNGRepresentation(imgArr[sender.tag]) as Data?
-                    favController?.save(name: coursesName[sender.tag], imgData: data!)
-                }
-                
-            } else if !favCourses.keys.contains(coursesName[sender.tag]) {
-                favCourses.updateValue(imgArr[sender.tag], forKey: coursesName[sender.tag])
-                let data = UIImagePNGRepresentation(imgArr[sender.tag]) as Data?
-                favController?.save(name: coursesName[sender.tag], imgData: data!)
-            }
-        }
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        guard let appDelegate =
-            UIApplication.shared.delegate as? AppDelegate else {
-                return
-        }
-        let managedContext =
-            appDelegate.persistentContainer.viewContext
-        let fetchRequest =
-            NSFetchRequest<NSManagedObject>(entityName: "Courses")
-        do {
-            coursesInMemory = try managedContext.fetch(fetchRequest)
-        } catch let error as NSError {
-            print("Could not fetch. \(error), \(error.userInfo)")
-        }
+        self.coursesInMemory = mem!.takeYourMemory()
         self.tableView.reloadData()
     }
     override func didReceiveMemoryWarning() {

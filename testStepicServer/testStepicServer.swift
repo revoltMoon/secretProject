@@ -24,7 +24,7 @@ class testStepicServer: XCTestCase {
     
     func testStepic(){
         self.measure {
-            stepServer?.getCourse(int: 1)
+            stepServer?.getCourse(ourPage: 1)
         }
     }
 }

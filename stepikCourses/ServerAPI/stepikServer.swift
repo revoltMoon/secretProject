@@ -14,11 +14,11 @@ protocol stepikDel {
 }
 class stepikServer {
     var delegate: (stepikDel?) = nil
-    func getCourse(int: Int) {
+    func getCourse(ourPage: Int) {
         var courseNames = [String]()
         var urlImgArr = [UIImage]()
         var urlImages = [String]()
-        let path = "https://stepik.org/api/search-results?page=\(int)"
+        let path = "https://stepik.org/api/search-results?page=\(ourPage)"
         let request = URL(string: path)
         let session = URLSession(configuration: URLSessionConfiguration.default)
         let task = session.dataTask(with: request!, completionHandler: {(data, response, error) -> Void in

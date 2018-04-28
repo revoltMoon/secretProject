@@ -9,6 +9,5 @@
 import UIKit
 class favouriteTableViewCell: UITableViewCell {
     @IBOutlet weak var favCourseImage: UIImageView!
-    
     @IBOutlet weak var favCourseName: UILabel!
 }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A20E651208B51C100848EEC /* favouriteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20E650208B51C100848EEC /* favouriteTableViewController.swift */; };
 		5A20E653208B529F00848EEC /* favouriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A20E652208B529F00848EEC /* favouriteTableViewCell.swift */; };
+		5A26230A2094F702007832E5 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2623092094F702007832E5 /* Memory.swift */; };
 		5A38A894208CCBAC00C1057D /* storedData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */; };
 		5A38A8BD208D2D5700C1057D /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8BC208D2D5700C1057D /* tableViewTests.swift */; };
 		5A38A8CB208D36A500C1057D /* favTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8CA208D36A500C1057D /* favTableViewTests.swift */; };
@@ -50,6 +51,7 @@
 /* Begin PBXFileReference section */
 		5A20E650208B51C100848EEC /* favouriteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteTableViewController.swift; sourceTree = "<group>"; };
 		5A20E652208B529F00848EEC /* favouriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favouriteTableViewCell.swift; sourceTree = "<group>"; };
+		5A2623092094F702007832E5 /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
 		5A38A893208CCBAC00C1057D /* storedData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = storedData.xcdatamodel; sourceTree = "<group>"; };
 		5A38A8BA208D2D5700C1057D /* tableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A38A8BC208D2D5700C1057D /* tableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewTests.swift; sourceTree = "<group>"; };
@@ -130,6 +132,15 @@
 			path = ServerAPI;
 			sourceTree = "<group>";
 		};
+		5A26230B2094FEB8007832E5 /* memory */ = {
+			isa = PBXGroup;
+			children = (
+				5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */,
+				5A2623092094F702007832E5 /* Memory.swift */,
+			);
+			path = memory;
+			sourceTree = "<group>";
+		};
 		5A38A8BB208D2D5700C1057D /* tableViewTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,12 +202,12 @@
 		5ADC91EB208B2A8900668A26 /* stepikCourses */ = {
 			isa = PBXGroup;
 			children = (
+				5A26230B2094FEB8007832E5 /* memory */,
 				5A38A8EC208D407E00C1057D /* storyboards */,
 				5A20E654208B535300848EEC /* TableViewCell */,
 				5A20E655208B538300848EEC /* TableViewControllers */,
 				5A20E656208B539800848EEC /* ServerAPI */,
 				5ADC91F3208B2A8B00668A26 /* Assets.xcassets */,
-				5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */,
 				5ADC91EC208B2A8900668A26 /* AppDelegate.swift */,
 				5ADC91F8208B2A8B00668A26 /* Info.plist */,
 				5ADD0F82208BE08500175929 /* NotFound.png */,
@@ -390,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A26230A2094F702007832E5 /* Memory.swift in Sources */,
 				5ADC91EF208B2A8900668A26 /* tableViewController.swift in Sources */,
 				5A20E651208B51C100848EEC /* favouriteTableViewController.swift in Sources */,
 				5ADC9201208B346500668A26 /* tableViewCell.swift in Sources */,
