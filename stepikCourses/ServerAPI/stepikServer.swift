@@ -35,13 +35,17 @@ class stepikServer {
                     
                     if let name  = info["course_cover"] as? String {
                             urlImages.append(name)
+                    } else {
+                         urlImages.append("empty")
                         }
-                    }
+                  }
                 }
                                 DispatchQueue.global(qos: .userInitiated).async {
                                     for item in urlImages {
                                         if let dataWithImg = try? Data(contentsOf: URL(string: item)!){
                                             urlImgArr.append(UIImage(data: dataWithImg)!)
+                                        } else {
+                                            urlImgArr.append(UIImage(named: "NotFound.png")!)
                                         }
                                     }
                             DispatchQueue.main.async {

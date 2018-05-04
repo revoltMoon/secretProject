@@ -8,26 +8,25 @@
 
 import XCTest
 @testable import stepikCourses
-class favTableViewTests: XCTestCase {
-    var favTable :favouriteTableViewController?
+class memoryTests: XCTestCase {
+    var mem :Memory?
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        favTable = favouriteTableViewController()
+        mem = Memory()
         
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
-        favTable = nil
+        mem = nil
         super.tearDown()
     }
     
     func testSave() {
         let courseName = "math"
         let someData = Data()
-        favTable?.save(name: courseName, imgData: someData)
-        XCTAssert((favTable?.favCourses.isEmpty)!, "we didnt change it, it should be empty")
+        mem?.saveYourCourse(name: courseName, imgData: someData)
     }
     
     

@@ -62,10 +62,6 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
             cell.backgroundColor = UIColor(displayP3Red: 0.6, green: 0, blue: 0.5, alpha: 0.2)
                 //adding an image
                 if !imgArr.isEmpty {
-                if imgArr[indexPath.row].isEqual(nil) || coursesName.count > imgArr.count{
-                    //проверка, если у нас нет картинки для конкретного имени
-                    self.imgArr.append(UIImage(named: "NotFound.png")!)
-                }
                 if isSearching {
                     cell.courseImage?.image = scaleImage(img: (coursesNamesAndImages[filteredCourses[indexPath.row]])!)
                 } else {
@@ -113,10 +109,6 @@ class tableViewController: UITableViewController, UISearchResultsUpdating, stepi
     func addImgAndNameInDict() {
         if !imgArr.isEmpty && !coursesName.isEmpty{
         for idx in 0...imgArr.count-1 {
-            //проверка, если у нас нет картинки для конкретного имени
-            if coursesName.count > imgArr.count {
-                self.imgArr.append(UIImage(named: "NotFound.png")!)
-            }
             coursesNamesAndImages.updateValue(imgArr[idx], forKey: coursesName[idx])
         }
       }
