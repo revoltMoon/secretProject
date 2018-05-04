@@ -12,8 +12,7 @@
 		5A26230A2094F702007832E5 /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2623092094F702007832E5 /* Memory.swift */; };
 		5A38A894208CCBAC00C1057D /* storedData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A892208CCBAC00C1057D /* storedData.xcdatamodeld */; };
 		5A38A8BD208D2D5700C1057D /* tableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8BC208D2D5700C1057D /* tableViewTests.swift */; };
-		5A38A8CB208D36A500C1057D /* favTableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8CA208D36A500C1057D /* favTableViewTests.swift */; };
-		5A38A8D9208D39DF00C1057D /* testStepicServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8D8208D39DF00C1057D /* testStepicServer.swift */; };
+		5A38A8D9208D39DF00C1057D /* stepicServerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A38A8D8208D39DF00C1057D /* stepicServerTests.swift */; };
 		5ADC91ED208B2A8900668A26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC91EC208B2A8900668A26 /* AppDelegate.swift */; };
 		5ADC91EF208B2A8900668A26 /* tableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC91EE208B2A8900668A26 /* tableViewController.swift */; };
 		5ADC91F2208B2A8900668A26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADC91F0208B2A8900668A26 /* Main.storyboard */; };
@@ -57,10 +56,8 @@
 		5A38A8BC208D2D5700C1057D /* tableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tableViewTests.swift; sourceTree = "<group>"; };
 		5A38A8BE208D2D5700C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A38A8C8208D36A500C1057D /* favTableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = favTableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A38A8CA208D36A500C1057D /* favTableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = favTableViewTests.swift; sourceTree = "<group>"; };
-		5A38A8CC208D36A500C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A38A8D6208D39DF00C1057D /* testStepicServer.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = testStepicServer.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A38A8D8208D39DF00C1057D /* testStepicServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testStepicServer.swift; sourceTree = "<group>"; };
+		5A38A8D8208D39DF00C1057D /* stepicServerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stepicServerTests.swift; sourceTree = "<group>"; };
 		5A38A8DA208D39DF00C1057D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5ADC91E9208B2A8900668A26 /* stepikCourses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = stepikCourses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADC91EC208B2A8900668A26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,22 +147,13 @@
 			path = tableViewTests;
 			sourceTree = "<group>";
 		};
-		5A38A8C9208D36A500C1057D /* favTableViewTests */ = {
+		5A38A8D7208D39DF00C1057D /* stepicServerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5A38A8CA208D36A500C1057D /* favTableViewTests.swift */,
-				5A38A8CC208D36A500C1057D /* Info.plist */,
-			);
-			path = favTableViewTests;
-			sourceTree = "<group>";
-		};
-		5A38A8D7208D39DF00C1057D /* testStepicServer */ = {
-			isa = PBXGroup;
-			children = (
-				5A38A8D8208D39DF00C1057D /* testStepicServer.swift */,
+				5A38A8D8208D39DF00C1057D /* stepicServerTests.swift */,
 				5A38A8DA208D39DF00C1057D /* Info.plist */,
 			);
-			path = testStepicServer;
+			path = stepicServerTests;
 			sourceTree = "<group>";
 		};
 		5A38A8EC208D407E00C1057D /* storyboards */ = {
@@ -182,8 +170,7 @@
 			children = (
 				5ADC91EB208B2A8900668A26 /* stepikCourses */,
 				5A38A8BB208D2D5700C1057D /* tableViewTests */,
-				5A38A8C9208D36A500C1057D /* favTableViewTests */,
-				5A38A8D7208D39DF00C1057D /* testStepicServer */,
+				5A38A8D7208D39DF00C1057D /* stepicServerTests */,
 				5ADC91EA208B2A8900668A26 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -385,7 +372,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A38A8CB208D36A500C1057D /* favTableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A38A8D9208D39DF00C1057D /* testStepicServer.swift in Sources */,
+				5A38A8D9208D39DF00C1057D /* stepicServerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
